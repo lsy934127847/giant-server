@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            border: 10px solid red;
+            padding : 30px;
+            margin: 40px;
+            /* box-sizing:  */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+<script>
+
+class Stack {
+    constructor() {}
+    in(value) {
+        // 你的代码 入栈
+        if(this.arr){
+           this.arr.push(value)
+        }else{
+          this.arr = []
+          this.arr.push(value)
+        }
+      
+    }
+    out() {
+        // 你的代码 // 出栈 并输出出栈内容
+        if(this.arr){
+          console.log(this.arr.pop())
+        }
+    }
+    top() {
+        // 你的代码 输出栈顶元素 不出战
+        if(this.arr){
+           console.log(this.arr[this.arr.length-1])
+        }
+        
+    }
+    size() {
+        // 你的代码 栈的大小
+        if(this.arr){
+           console.log(this.arr.length)
+        }
+    }
+}
+
+// 要求当执行下列代码时，能输出预期的结果
+const stack = new Stack()
+stack.in('x')
+stack.in('y')
+stack.in('z')
+
+stack.top() // 输出 'z'
+stack.size() // 输出 3
+
+stack.out() // 输出 'z'
+stack.top() // 输出 'y'
+stack.size() // 输出 2
+</script>
